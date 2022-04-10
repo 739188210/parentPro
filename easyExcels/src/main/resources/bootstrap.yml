@@ -1,0 +1,16 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: easy_control
+  cloud:
+    nacos:
+      config:
+        refresh-enabled: false
+        file-extension: yaml
+        namespace: 8a8b9886-d100-4910-b211-c1b031a40ee0
+        group: DEV_GROUP
+#      discovery:
+#        server-addr: 127.0.0.1:8848
+  profiles:
+    active: dev
