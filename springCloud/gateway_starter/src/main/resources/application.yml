@@ -1,0 +1,14 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: spring-cloud-gateway
+  cloud:
+    gateway: # 配置springcloud-gateway相关属性
+      discovery: # 配置网关发现机制
+        locator: # 配置处理机制
+          # enabled: true 开启网关自动映射处理逻辑 （商业不开启，手写映射规则）
+          # 开启后 自动映射符合规则的请求： http://gatewayIP:gatewayPort/微服务名称/微服务请求地址
+          # 转发映射到:  http://微服务名称/微服务请求地址
+          enabled: true
+          lower-case-service-id: true # 开启服务名小写转换
